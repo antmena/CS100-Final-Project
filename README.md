@@ -1,5 +1,5 @@
 # COVID-19 Vaccine Distribution
-Group members: [Arthur Gao](https://github.com/arthurgao09), [Anthony Mena](https://github.com/antmena), [Michael Lo](https://github.com/lomichael), [Adrian Carrillo](https://github.com/acarrillo889)
+Group members: [Anthony Mena](https://github.com/antmena), [Michael Lo](https://github.com/lomichael), [Adrian Carrillo](https://github.com/acarrillo889)
 
 ## Why is it important or interesting to you?
     
