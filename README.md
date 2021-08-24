@@ -18,3 +18,7 @@ The input is people who will be vaccinated for COVID-19. The output is the perso
 * The Composite design pattern will be implemented as a DistributionList class, that aggregates People objects. The DistributionList class will maintain the list data structure that holds the People objects. 
 
 * The Strategy design pattern will be implemented as a class that orders the DistributionList according to the desired characteristic. People will be moved around the list according to age, current condition, or number of vaccinations received. There will be Strategy classes that order the list for vaccination according to the age, current condition, or number of vaccinations received. Effectively, the top person of the list will be the next in line for the vaccine.
+
+![image](https://user-images.githubusercontent.com/68964138/130566539-5aceeb22-5c69-4dcd-a9df-3b8e65f7989d.png)
+
+
