@@ -27,5 +27,8 @@ Class Diagram Description:
 
 * The strategy design pattern in our final project is the abstract class which we have as arrangePatients that has a virtual function called display(string type). The arrangePatients abstract class has two derived classes (strategy classes) that both display the patients in the order of their neccessity for the covid vaccine. Age is more important than health so it will take priority. For the arrangeByHealth class, it will display the health of each patient in line from most priority being the eldest, to the least priority being the youngest. The arrangeByAge class is similar in that it will display the age of each patient in line from the most priority being the most compromised in health to the least compromised in health.
 
+# Kanban Board Link
+
+Link:(https://trello.com/b/hT80aquy/kanban-template)
 
 
