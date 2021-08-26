@@ -5,54 +5,61 @@
 
 class EBehavior //Strategy
 {
-    public:
+public:
 	virtual ~EBehavior() {}
 	virtual void keyPress() = 0;
 };
 
 class Raze : public EBehavior //Concrete Strategy
 {
-    public:
+public:
 	~Raze() {}
+
 	void keyPress()
 	{
-	std::cout << "Boom!" << std::endl;
+		std::cout << "Boom!" << std::endl;
 	}
 };
 
-class Sage : public EBehavior 
+class Sage : public EBehavior
 {
-    public:
+public:
 	~Sage() {}
+
 	void keyPress()
 	{
-	std::cout << "Barrier created" << std::endl;
+		std::cout << "Barrier created" << std::endl;
 	}
 };
 
 class Agent
 {
-    public:
-	Agent(EBehavior* const s)
+public:
+	Agent(EBehavior *const s)
 	{
-	this->strategy = s;
-	this->health = 100;
+		this->strategy = s;
+		this->health = 100;
 	}
-	~Agent(){ delete strategy; }
+
+	~Agent() { delete strategy; }
+
 	void EAbility()
 	{
-	strategy->keyPress();
+		strategy->keyPress();
 	}
-	int hp() 
+
+	int hp()
 	{
-	return health;
+		return health;
 	}
+
 	int hp(int damage)
 	{
-	health = health - damage;
-	return health;
+		health = health - damage;
+		return health;
 	}
-    private:
+
+private:
 	EBehavior *strategy;
 	int health;
 };
