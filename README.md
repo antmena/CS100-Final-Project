@@ -20,7 +20,7 @@ The input of the game will be the agent that you choose to play as and the outpu
 * The Strategy design pattern will be implemented as a class that builds the agent and depending on which agent you want it will choose the class for the agent that determines the E-ability, which is the special attack of the agent.
 
 # Class Diagram
-![Final Project CS100](https://user-images.githubusercontent.com/68964138/130569372-0558da3b-2d45-4e78-86cb-139c05855e8f.png)
+![Final Project CS100](https://user-images.githubusercontent.com/24843819/130893585-1c9c18f0-72a8-4817-9f29-91c48c154482.png)
 
 Class Diagram Description:
 * The abstract factory design pattern in our final project...(TBD)
@@ -29,6 +29,7 @@ Class Diagram Description:
 
 # Kanban Board Link
 
-Link:(https://trello.com/b/hT80aquy/kanban-template)
+Link:(https://trello.com/b/hT80aquy/kanban-template)!
+
 
 
