@@ -1,13 +1,16 @@
 #include <iostream>
 #include "valorant_agents.hpp"
+#include "valorant_weapons.hpp"
 
 int main()
 {	
 	std::string choice = "";
+	
+	Agent Raze_AI(new Raze());
 
 	while(choice != "Raze" && choice != "Sage")
 	{
-	std::cout << "Please choose your agent." << std::endl;
+	std::cout << "Please choose your agent. Enter: Raze or Sage" << std::endl;
 	std::cin >> choice;
 
 	if(choice == "Raze")
@@ -30,6 +33,17 @@ int main()
 	}	
 }
 	std::cout << "Round 1 has now begun!" << std::endl;
+	
+	Factory *DuelistFactory = new DuelistWeaponFactory; //Creating Dueliost Weapons
+	Factory *SentinelFactory = new SentinelWeaponFactory; //Creating Sentinel Weapons
+	Client *s = new Client(SentinelFactory);
+	s->build();
+
+	//if(choice == Raze) 
+	//{
+	
+	//}
+
 
 return 0;
 }

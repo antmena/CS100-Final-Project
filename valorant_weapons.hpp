@@ -1,12 +1,60 @@
-#include <iostream>
-
-#define __VALORANT_WEAPONS__
 #ifndef __VALORANT_WEAPONS__
+#define __VALORANT_WEAPONS__
+
+#include <iostream>
 
 class Weapon
 {
+protected:
+	int damage;
 public:
 	virtual void build() = 0;
+	int getDamage();
+};
+
+class SentinelPrimaryWeapon : public Weapon
+{
+public:
+	void build() 
+	{
+	this->damage = 9;
+	std::cout << "Vandal: " << this->damage << "\n"; 
+	}
+	int getDamage()
+	{
+	return this->damage;
+	}
+};
+class SentinelSecondaryWeapon : public Weapon
+{
+public:
+	void build() 
+	{
+	this->damage = 5; 
+	std::cout << "Sheriff: " << this->damage << "\n"; 
+	}
+};
+
+class DuelistPrimaryWeapon : public Weapon
+{
+public:
+	void build() 
+	{
+	this->damage = 7; 
+	std::cout << "Phantom: " << this->damage << "\n"; }
+};
+class DuelistSecondaryWeapon : public Weapon
+{
+public:
+	void build() 
+	{ 
+	this->damage = 4;
+	std::cout << "Ghost: " << this->damage << "\n"; 
+	}
+	int getDamage() 
+	{
+	return this->damage;
+	}
 };
 
 class Factory
@@ -30,28 +78,6 @@ public:
 	Weapon *create_secondary() { return new DuelistSecondaryWeapon; }
 };
 
-class SentinelPrimaryWeapon : public Weapon
-{
-public:
-	void build() { std::cout << "Vandal\n"; }
-};
-class SentinelSecondaryWeapon : public Weapon
-{
-public:
-	void build() { std::cout << "Sheriff\n"; }
-};
-
-class DuelistPrimaryWeapon : public Weapon
-{
-public:
-	void build() { std::cout << "Phantom\n"; }
-};
-class DuelistSecondaryWeapon : public Weapon
-{
-public:
-	void build() { std::out << "Phantom\n"; }
-};
-
 class Client
 {
 private:
@@ -63,9 +89,9 @@ public:
 	void build()
 	{
 		Weapon *w = factory->create_primary();
-		w->build();
+		//w->build();
 		display_agentType_one();
-		display_agentType_two();
+		//display_agentType_two();
 	}
 
 	void display_agentType_one()
@@ -76,8 +102,8 @@ public:
 		w[0]->build();
 		w[1]->build();
 	}
-
-	void display_agentType_one()
+	
+	/*void display_agentType_two()
 	{
 		Weapon *w[] = {
 			factory->create_primary(),
@@ -85,6 +111,7 @@ public:
 		w[0]->build();
 		w[1]->build();
 	}
+	*/
 };
 
 #endif

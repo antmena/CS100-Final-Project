@@ -1,17 +1,21 @@
 #include <iostream>
 #include "valorant_weapons.hpp"
 
-//using namespace std;
+using namespace std;
 
 int main()
 {
-	Factory *factory;
-#ifdef SENTINEL
-	factory = new SentinelWeaponFactory;
-#else //Duelist
-	factory = new DuelistWeaponFactory;
-#endif
+	Factory *SentinelFactory;
+	Factory *DuelistFactory;
+//#ifdef SENTINEL
+	SentinelFactory = new SentinelWeaponFactory;
+//#else //Duelist
+	DuelistFactory = new DuelistWeaponFactory;
+//#endif
 
-	Client *c = new Client(factory);
-	c->build();
+	Client *s = new Client(SentinelFactory);
+	s->build();
+
+	Client *d = new Client(DuelistFactory);
+	d->build();
 }
