@@ -23,9 +23,9 @@ The input of the game will be the agent that you choose to play as and the outpu
 ![Final Project CS100](https://user-images.githubusercontent.com/24843819/130893585-1c9c18f0-72a8-4817-9f29-91c48c154482.png)
 
 Class Diagram Description:
-* The abstract factory design pattern in our final project...(TBD)
+* The abstract factory design pattern in our final project will be used to create a weapon factory. The abstract base class will be used to build the primary and secondary weapons. Nothing will be done in that base factory but after it goes to 2 different factories which determine the agent type of the agent you selected. After this a concrete product is made for your agent type with pre-selected weapons depending on the agent type; Sentinel or Duelist.
 
-* The strategy design pattern in our final project..(TBD)
+* The strategy design pattern in our final project builds the agents themselves and the E ability of the agents. These E abilities don't help in combat in terms of damage but offer voice lines from the game Valorant itself to give more life to the text.
 
 # Kanban Board Link
 
