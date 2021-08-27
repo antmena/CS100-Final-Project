@@ -39,6 +39,10 @@ int main()
 	Client *s = new Client(SentinelFactory);
 	s->build();
 
+	SentinelPrimaryWeapon sent;
+
+	std::cout << sent.getDamage() << "\n";
+
 	//if(choice == Raze) 
 	//{
 	

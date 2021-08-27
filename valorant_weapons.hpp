@@ -8,16 +8,16 @@ class Weapon
 protected:
 	int damage;
 public:
-	virtual void build() = 0;
+	virtual void build() = 0; 
 	int getDamage();
 };
 
 class SentinelPrimaryWeapon : public Weapon
 {
 public:
+	SentinelPrimaryWeapon() {this->damage = 9; }	
 	void build() 
 	{
-	this->damage = 9;
 	std::cout << "Vandal: " << this->damage << "\n"; 
 	}
 	int getDamage()
@@ -28,33 +28,34 @@ public:
 class SentinelSecondaryWeapon : public Weapon
 {
 public:
+	SentinelSecondaryWeapon() {this->damage = 5;}
 	void build() 
 	{
-	this->damage = 5; 
 	std::cout << "Sheriff: " << this->damage << "\n"; 
 	}
+	int getDamage() { return this->damage; }
 };
 
 class DuelistPrimaryWeapon : public Weapon
 {
 public:
+	DuelistPrimaryWeapon() { this->damage = 7; }
 	void build() 
 	{
-	this->damage = 7; 
-	std::cout << "Phantom: " << this->damage << "\n"; }
+	std::cout << "Phantom: " << this->damage << "\n"; 
+	}
+	int getDamage() { return this->damage; }
 };
 class DuelistSecondaryWeapon : public Weapon
 {
 public:
+	DuelistSecondaryWeapon() { this->damage = 4; }
 	void build() 
 	{ 
 	this->damage = 4;
 	std::cout << "Ghost: " << this->damage << "\n"; 
 	}
-	int getDamage() 
-	{
-	return this->damage;
-	}
+	int getDamage() { return this->damage; }
 };
 
 class Factory
