@@ -45,9 +45,11 @@ Link:(https://trello.com/b/hT80aquy/kanban-template)!
 ![Second Screenshot CS100 Final Project](https://user-images.githubusercontent.com/68964138/131264570-fd6f5f94-8df7-45d7-ad78-45cc33a992aa.png)
 
 * This third image is showing an example of how each action the character chooses to input acts.
+
 ![Screenshot 3 CS100 Final Proeject](https://user-images.githubusercontent.com/68964138/131264576-3137d718-3a6c-4ff8-8480-27daaad482bf.png)
 
 * This final image will show what happens once one of the players health reaches 0 and the game has ended.
+
 ![Screenshot 4 CS100 Final Project](https://user-images.githubusercontent.com/68964138/131264578-6582edf2-9ef0-4f39-830f-1b034625d20b.png)
 
 # Installation/Usage
@@ -56,7 +58,7 @@ Link:(https://trello.com/b/hT80aquy/kanban-template)!
 * Next you would simply compile the application by running "g++ -g main.cpp -o valorantGame" in your terminal to generate the executable for the game. This would be followed by running the executable in your terminal by running "./valorantGame", which would now begin the game.
 
 # Testing
-*
+* We tested our project using the googletest framework for c++. For the separate design pattern strategies, abstract factory and strategy, we had separate branches and files that we used to test them more loosely. We created unit tests in different files, separate from the files in the 2 design pattern branches, as well to test each class and their design as well to make sure everything functions well and our classes carry out the patterns that we designed for the game.
 
 
 
