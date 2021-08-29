@@ -36,7 +36,8 @@ Class Diagram Description:
 Link:(https://trello.com/b/hT80aquy/kanban-template)!
 
 # Screenshots
-* This image is a picture of the choose agent prompt that prompt the user when first starting to choose one of two agents available to play as in the game.
+* This image is a picture of the choose agent prompt that prompts the user when first starting to choose one of two agents available to play as in the game.
+
 ![First Screenshot CS100 Final Project](https://user-images.githubusercontent.com/68964138/131264558-e8445cd7-0b07-42ab-96ed-9aee45c79217.png)
 
 * This second image is a voice line depending on the agent you have chosen to play as in the game. After you have chosen your agent and the voice line has displayed as output, you will see the health each player starts with and the game will begin. There will be a menu of options that can be done by the agent during their turn in the game. This is basically the way the game will play out until the AI or the users health reaches 0.
