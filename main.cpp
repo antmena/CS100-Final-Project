@@ -8,9 +8,11 @@ using namespace std;
 int main()
 {
 	std::string choice = "";
+	
+	Raze* razePtr = new Raze();
 
-	Agent Raze_AI(new Raze());
-	Agent UserAgent(new Raze());
+	Agent Raze_AI(razePtr);
+	Agent UserAgent(razePtr);
 
 	while (choice != "Raze" && choice != "Sage")
 	{
@@ -20,11 +22,13 @@ int main()
 
 	if (choice == "Raze")
 	{
+		//delete UserAgent;
 		UserAgent = new Raze();
 		std::cout << "Yes, I'm pumped!" << std::endl;
 	}
 	else if (choice == "Sage")
 	{
+		//delete UserAgent;
 		UserAgent = new Sage();
 		std::cout << "I am both shield and sword" << std::endl;
 	}
@@ -107,6 +111,11 @@ int main()
 	}
 
 	cout << (Raze_AI.hp() > 0 ? "Enemy wins!" : "You win!") << endl;
+	
+	delete razePtr;
+	delete SentinelFactory;
+	delete DuelistFactory;
+	//delete ;
 
 	return 0;
 }
