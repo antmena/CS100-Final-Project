@@ -27,7 +27,7 @@ The input of the game will start as the agent that you choose to play as. From h
 ![Final Project CS100](https://user-images.githubusercontent.com/24843819/130893585-1c9c18f0-72a8-4817-9f29-91c48c154482.png)
 
 Class Diagram Description:
-* The abstract factory design pattern in our final project will be used to create a weapon factory. The abstract base class will be used to build the primary and secondary weapons. Nothing will be done in that base factory but after it goes to 2 different factories which determine the agent type of the agent you selected. After this a concrete product is made for your agent type with pre-selected weapons depending on the agent type; Sentinel or Duelist. The characterisitc of the weapons, the damage, is also done here.
+* The abstract factory design pattern in our final project will be used to create a weapon factory. The abstract base class will be used to build the primary and secondary weapons. Nothing will be done in that base factory until after it goes to 2 different factories, which determines the agent type of the agent you selected. After this a concrete product is made for your agent type with pre-selected weapons depending on the agent type; Sentinel or Duelist. The characteristic of the weapons and the damage is also done here.
 
 * The strategy design pattern in our final project builds the agents themselves and the E ability of the agents. Depending on the agent themselves the E abiliy may either help in combat or not. Each agent has an E ability which is unique to them. There is also a voice line which is built inside these agent classes which are from the game of Valorant itself if you just want to give more life to the text of the game. 
 
