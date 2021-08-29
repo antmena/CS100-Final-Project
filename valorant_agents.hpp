@@ -17,7 +17,7 @@ public:
 
 	void keyPress()
 	{
-		std::cout << "Boom!" << std::endl;
+		std::cout << "5 damage" << std::endl;
 	}
 };
 
@@ -28,7 +28,7 @@ public:
 
 	void keyPress()
 	{
-		std::cout << "Barrier created" << std::endl;
+		std::cout << "2 damage" << std::endl;
 	}
 };
 
