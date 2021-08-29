@@ -11,8 +11,11 @@ int main()
 	
 	Raze* razePtr = new Raze();
 
-	Agent Raze_AI(razePtr);
-	Agent UserAgent(razePtr);
+	Raze *razePtr = new Raze();
+	Agent enemyRaze = Agent(razePtr);
+  Agent *Raze_AI = &enemyRaze;
+  
+	Agent *UserAgent;
 
 	while (choice != "Raze" && choice != "Sage")
 	{
@@ -22,14 +25,20 @@ int main()
 
 	if (choice == "Raze")
 	{
-		//delete UserAgent;
-		UserAgent = new Raze();
+
+		Raze *userRaze = new Raze();
+		Agent agentTemp = Agent(userRaze);
+		UserAgent = &agentTemp;
+
 		std::cout << "Yes, I'm pumped!" << std::endl;
 	}
 	else if (choice == "Sage")
 	{
-		//delete UserAgent;
-		UserAgent = new Sage();
+
+		Sage *userSage = new Sage();
+		Agent agentTemp = Agent(userSage);
+		UserAgent = &agentTemp;
+
 		std::cout << "I am both shield and sword" << std::endl;
 	}
 
@@ -44,7 +53,7 @@ int main()
 	SentinelPrimaryWeapon vandal;
 	SentinelSecondaryWeapon sheriff;
 
-	while (Raze_AI.hp() > 0 && UserAgent.hp() > 0)
+	while (Raze_AI->hp() > 0 && UserAgent->hp() > 0)
 	{
 		std::cout << "Round " << roundNumber << " has now begun!" << std::endl;
 
@@ -53,8 +62,8 @@ int main()
 		int actionIndex = rand() % 3;
 		enemyDamage = razeActionDamages[actionIndex];
 
-		cout << "Enemy Raze HP: " << Raze_AI.hp() << endl;
-		cout << "Your HP: " << UserAgent.hp() << endl;
+		cout << "Enemy Raze HP: " << Raze_AI->hp() << endl;
+		cout << "Your HP: " << UserAgent->hp() << endl;
 
 		if (agentName == "Raze")
 		{
@@ -65,20 +74,20 @@ int main()
 
 			if (choice == "p" || choice == "P")
 			{
-				Raze_AI.hp(phantom.getDamage());
+				Raze_AI->hp(phantom.getDamage());
 				cout << "Dealt " << phantom.getDamage() << " damage." << endl;
 			}
 			if (choice == "s" || choice == "S")
 			{
-				Raze_AI.hp(ghost.getDamage());
+				Raze_AI->hp(ghost.getDamage());
 				cout << "Dealt " << ghost.getDamage() << " damage." << endl;
 			}
 			if (choice == "a" || choice == "A")
 			{
-				Raze_AI.hp(5);
+				Raze_AI->hp(5);
 				cout << "Dealt 5 damage." << endl;
 			}
-			UserAgent.hp(enemyDamage);
+			UserAgent->hp(enemyDamage);
 			cout << "Enemy dealt " << enemyDamage << " damage to you." << endl;
 		}
 		if (agentName == "Sage")
@@ -90,12 +99,12 @@ int main()
 
 			if (choice == "p" || choice == "P")
 			{
-				Raze_AI.hp(vandal.getDamage());
+				Raze_AI->hp(vandal.getDamage());
 				cout << "Dealt " << vandal.getDamage() << " damage." << endl;
 			}
 			else if (choice == "s" || choice == "S")
 			{
-				Raze_AI.hp(sheriff.getDamage());
+				Raze_AI->hp(sheriff.getDamage());
 				cout << "Dealt " << sheriff.getDamage() << " damage." << endl;
 			}
 			else if (choice == "a" || choice == "A")
@@ -104,18 +113,17 @@ int main()
 				cout << "Blocked 2 damage." << endl;
 				cout << "Took " << enemyDamage - 2 << " damage." << endl;
 			}
-			UserAgent.hp(enemyDamage);
+			UserAgent->hp(enemyDamage);
 			cout << "Enemy dealt " << enemyDamage << " damage to you." << endl;
 		}
 		roundNumber++;
 	}
 
-	cout << (Raze_AI.hp() > 0 ? "Enemy wins!" : "You win!") << endl;
-	
-	delete razePtr;
+
+	cout << (Raze_AI->hp() > 0 ? "Enemy wins!" : "You win!") << endl;
+
 	delete SentinelFactory;
 	delete DuelistFactory;
-	//delete ;
 
 	return 0;
 }
