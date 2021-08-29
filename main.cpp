@@ -9,11 +9,11 @@ int main()
 {
 	std::string choice = "";
 	
+		
 	Raze* razePtr = new Raze();
-
-	Raze *razePtr = new Raze();
 	Agent enemyRaze = Agent(razePtr);
-  Agent *Raze_AI = &enemyRaze;
+
+	Agent *Raze_AI = &enemyRaze;
   
 	Agent *UserAgent;
 

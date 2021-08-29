@@ -13,7 +13,7 @@ public:
 class Raze : public EBehavior //Concrete Strategy
 {
 public:
-	~Raze(){ std::cout << "Destroying Raze" << std::endl ;}
+	~Raze(){}
 
 	void keyPress()
 	{
@@ -24,7 +24,7 @@ public:
 class Sage : public EBehavior
 {
 public:
-	~Sage() {std::cout << "Destroying Sage" << std::endl;}
+	~Sage() {}
 
 	void keyPress()
 	{
@@ -41,7 +41,7 @@ public:
 		this->health = 100;
 	}
 
-	//~Agent() { std::cout << "Destroyed Agent" << std::endl; delete strategy; }
+	~Agent() { delete strategy; }
 
 	void EAbility()
 	{
