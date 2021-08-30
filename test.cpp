@@ -160,7 +160,6 @@ DuelistSecondaryWeapon Test;
 
         EXPECT_EQ(4, Test.getDamage());
 
-
 }
 
 
